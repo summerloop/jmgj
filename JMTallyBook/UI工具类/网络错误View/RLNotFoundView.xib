@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RLNotFoundView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_networkfailure" translatesAutoresizingMaskIntoConstraints="NO" id="DH7-AK-ljr">
+                    <rect key="frame" x="100" y="130" width="175" height="175"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="P0d-1J-vr7">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="175" id="mPX-Y9-fo6">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-oY-D5y">
+                    <rect key="frame" x="162" y="320" width="51" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="adapterFontSize" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59i-hS-UCG">
+                    <rect key="frame" x="132" y="369.5" width="112.5" height="42"/>
+                    <color key="backgroundColor" red="0.098039215686274508" green="0.44313725490196076" blue="1" alpha="0.10501391267123288" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="m9K-W1-l4o">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="112.5" id="yVJ-5N-OM3">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <state key="normal" title="Refresh">
+                        <color key="titleColor" red="0.098039215686274508" green="0.44313725490196076" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="adapterFontSize" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DH7-AK-ljr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2NK-Pv-rs4"/>
+                <constraint firstItem="O9V-oY-D5y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q9t-g5-P8M"/>
+                <constraint firstItem="O9V-oY-D5y" firstAttribute="top" secondItem="DH7-AK-ljr" secondAttribute="bottom" constant="15" id="evz-fJ-fhS">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="59i-hS-UCG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hmb-uX-Fa2"/>
+                <constraint firstItem="DH7-AK-ljr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="130" id="k63-S0-hea"/>
+                <constraint firstItem="59i-hS-UCG" firstAttribute="top" secondItem="O9V-oY-D5y" secondAttribute="bottom" constant="30" id="wrP-tL-iIk">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="adapterScreen" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+            </constraints>
+            <connections>
+                <outlet property="refreshButton" destination="59i-hS-UCG" id="9Ys-dA-Gk0"/>
+                <outlet property="topVerConstraint" destination="k63-S0-hea" id="lQ1-9I-KuJ"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="pic_networkfailure" width="350" height="350"/>
+    </resources>
+</document>
